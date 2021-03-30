@@ -1,0 +1,16 @@
+
+
+Type of Error:
+
+NameError (uninitialized constant Docking_Station)
+
+File path where the error happened:
+
+Main
+
+Line no:
+
+1
+
+Resolve by creating Class Docking_station
+
