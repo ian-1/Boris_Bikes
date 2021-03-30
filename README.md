@@ -16,7 +16,3 @@ User  |
 Customer  | find_by_surname
 Bike |  working? 
 Docking station | release_bike
-
-
-
-
