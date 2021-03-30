@@ -10,9 +10,12 @@ Mock up of Boris Bikes challenge
 ruby boris_bike.rb
 ```
 
+## Domain Model
+
 Objects  | Messages
 ------------- | -------------
 User  | 
 Customer  | find_by_surname
 Bike |  working? 
-Docking station | release_bike
+Docking station | release_bike, dock_bike
+
