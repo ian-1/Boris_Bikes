@@ -33,4 +33,22 @@ describe DockingStation do
   DockingStation::DEFAULT_CAPACITY.times { subject.dock_bike(bike) }
   expect{ subject.dock_bike(bike) }.to raise_error('Docking Station is full')
  end
+
+ it 'create docking station with non default capacity' do
+  expect{DockingStation.new(100)}.not_to raise_error 
+ end
+
+ it 'create docking station with specified capacity, check works to capacity' do
+  docking_100 = DockingStation.new(100)
+  bike = Bike.new
+  99.times { docking_100.dock_bike(bike) }
+  expect{ docking_100.dock_bike(bike) }.not_to raise_error
+ end
+
+ it 'create docking station with specified capacity, check fails after capacity' do
+  docking_100 = DockingStation.new(100)
+  bike = Bike.new
+  100.times { docking_100.dock_bike(bike) }
+  expect{ docking_100.dock_bike(bike) }.to raise_error('Docking Station is full')
+ end
 end
